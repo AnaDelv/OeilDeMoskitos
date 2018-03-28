@@ -5,7 +5,7 @@ include 'lib/functions.php';
 	$pdo = connectDb();
 	
 	$sql = $pdo ->query("SELECT * FROM `server`");
-    $stmnt = $pdo ->query("SELECT * FROM `service`");
+
 
 ?>
 
@@ -33,8 +33,8 @@ include 'lib/functions.php';
 				
 				?>
 				 <tbody>
+                        <!-- Tableau pour les serveurs  -->
 					    <tr>
-
 					      <th style="text-align: center;"><?php echo $donnee['name']?></th>
 					      <td style="text-align: center;"><?php echo $donnee['host']?></td>
                             <td style="text-align: center;"><?php pingIp($donnee['host']); ?></td>
@@ -42,6 +42,19 @@ include 'lib/functions.php';
                         </tr>
 				</tbody>
 				<?php
+                    $stmnt = $pdo ->query("SELECT * FROM `service` WHERE idserver =". $donnee['idserver']);
+                    while ($data = $stmnt->fetch()) { ?>
+
+                        <tr>
+                            <!-- Tableau pour les services  -->
+                            <th style="text-align: center;"><?php echo $data['name'] ?></th>
+                            <td style="text-align: center;"><?php echo $data['socket'] ?></td>
+
+                        </tr>
+                        </tbody>
+
+                        <?php
+                    }
 					}
 				?>
 
