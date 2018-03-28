@@ -15,31 +15,28 @@ include 'lib/functions.php';
         <meta name="robots" content="noindex">
         <meta charset="utf-8">
         <title>Server(s) Status</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
     	<div class="container">
     		<h3>Servers Status</h3>
     		<table class="table table-bordered">
 				<tr>
-					<th class="text-center">Name</th>
+                    <th class="text-center">Name</th>
 					<th class="text-center">IP</th>
 					<th class="text-center">Status</th>
-
 				</tr>
 				<?php
 					while ($donnee = $sql->fetch()) {
 				
 				?>
 				 <tbody>
-					    <tr>
-
-					      <th style="text-align: center;"><?php echo $donnee['name']?></th>
-					      <td style="text-align: center;"><?php echo $donnee['host']?></td>
-                            <td style="text-align: center;"><?php pingIp($donnee['host']); ?></td>
-
-                        </tr>
+                     <tr>
+                         <th style="text-align: center;"><?php echo $donnee['name']?></th>
+                         <td style="text-align: center;"><?php echo $donnee['host']?></td>
+                         <td style="text-align: center;"><?php pingIp($donnee['host']); ?></td>
+                     </tr>
 				</tbody>
 				<?php
 					}
