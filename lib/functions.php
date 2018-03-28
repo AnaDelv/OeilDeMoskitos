@@ -24,11 +24,6 @@ function pingIp($ip) {
 }
 
 
-
-
-$host = "www.google.com";
-$port = "80";
-
 function pingSocket($host, $port) {
 
         $socket = @fsockopen($host,$port);
