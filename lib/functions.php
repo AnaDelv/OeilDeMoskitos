@@ -37,7 +37,11 @@ function pingSocket($host, $port) {
 }
 
 
-
+function getPingIpResult($ip) {
+    exec('ping '.$ip,$output, $return_var);
+    $result = explode("=",$output[10]);
+    echo $result[3];
+}
 
 
 
