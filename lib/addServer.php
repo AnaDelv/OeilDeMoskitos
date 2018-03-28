@@ -16,7 +16,7 @@ function verifField() {
 function addServer($name, $host, $port)
 {
 	$pdo = connectDb();
-	$pdo ->exec("INSERT INTO `list_serv`(name, host, port) VALUES ('$name', '$host', '$port')");
+	$pdo ->exec("INSERT INTO `server`(name, host) VALUES ('$name', '$host')");
 	header('Location: ../index.php');
 }
 
