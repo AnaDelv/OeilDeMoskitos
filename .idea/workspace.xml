@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddaa8412-b4ba-45e2-b8a9-414200032274" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
       <change beforePath="$PROJECT_DIR$/lib/functions.php" afterPath="$PROJECT_DIR$/lib/functions.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +20,13 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/functions.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="945">
               <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+=======
+            <state relative-caret-position="408">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
               <folding />
             </state>
           </provider>
@@ -27,6 +35,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1680">
               <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
@@ -43,6 +52,13 @@
               <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <marker date="1522239351539" expanded="true" signature="110:160" ph="DELETE FROM `list_serv`... " />
+=======
+            <state relative-caret-position="1173">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1522239388442" expanded="true" signature="82:107" ph="SELECT * FRO... list_serv" />
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
               </folding>
             </state>
           </provider>
@@ -97,7 +113,10 @@
         <option value="$PROJECT_DIR$/lib/deleteServer.php" />
         <option value="$PROJECT_DIR$/lib/addServer.php" />
         <option value="$PROJECT_DIR$/index.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
+=======
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
         <option value="$PROJECT_DIR$/lib/functions.php" />
       </list>
     </option>
@@ -190,13 +209,21 @@
       <option name="presentableId" value="Default" />
       <updated>1522151796037</updated>
       <workItem from="1522151797585" duration="9344000" />
+<<<<<<< HEAD
       <workItem from="1522221168416" duration="13211000" />
       <workItem from="1522239410764" duration="1515000" />
+=======
+      <workItem from="1522221168416" duration="15058000" />
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="24070000" />
+=======
+    <option name="totallyTimeSpent" value="24402000" />
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
@@ -329,6 +356,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/lib/deleteServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -340,6 +368,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
+=======
+    <entry file="file://$PROJECT_DIR$/lib/addServer.php">
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
           <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
@@ -349,13 +380,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/functions.php">
+    <entry file="file://$PROJECT_DIR$/lib/deleteServer.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="945">
           <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+=======
+        <state relative-caret-position="255">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <marker date="1522238243438" expanded="true" signature="110:160" ph="DELETE FROM `list_serv`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1522239388442" expanded="true" signature="82:107" ph="SELECT * FRO... list_serv" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 8f9041220dc0e908ce233ae71af0ad41d807be27
   </component>
 </project>

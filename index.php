@@ -26,7 +26,7 @@ include 'lib/functions.php';
 					<th class="text-center">IP</th>
 					<th class="text-center">Port</th>
 					<th class="text-center">Status</th>
-					<th class="text-center deleteMode" style="width:75px">Delete</th>
+
 				</tr>
 				<?php
 					while ($donnee = $sql->fetch()) {
@@ -40,11 +40,7 @@ include 'lib/functions.php';
 					      <td style="text-align: center;"><?php echo $donnee['port']?></td>
                             <td style="text-align: center;"><?php pingIp($donnee['host']); ?></td>
 
-                            <form action="lib/deleteServer.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $donnee['idserv']?>">
-                                <th class="text-center deleteMode" style="width:75px"><button class="btn btn-danger" type="submit">Delete</button></th>
-                            </form>
-					    </tr>
+                        </tr>
 				</tbody>
 				<?php
 					}
