@@ -4,7 +4,8 @@ include 'lib/functions.php';
 
 	$pdo = connectDb();
 	
-	$sql = $pdo ->query("SELECT * FROM `list_serv`");
+	$sql = $pdo ->query("SELECT * FROM `server`");
+    $stmnt = $pdo ->query("SELECT * FROM `service`");
 
 ?>
 
@@ -24,7 +25,6 @@ include 'lib/functions.php';
 				<tr>
 					<th class="text-center">Name</th>
 					<th class="text-center">IP</th>
-					<th class="text-center">Port</th>
 					<th class="text-center">Status</th>
 
 				</tr>
@@ -37,7 +37,6 @@ include 'lib/functions.php';
 
 					      <th style="text-align: center;"><?php echo $donnee['name']?></th>
 					      <td style="text-align: center;"><?php echo $donnee['host']?></td>
-					      <td style="text-align: center;"><?php echo $donnee['port']?></td>
                             <td style="text-align: center;"><?php pingIp($donnee['host']); ?></td>
 
                         </tr>
@@ -55,9 +54,7 @@ include 'lib/functions.php';
 				<div class="form-group">
 					<input type="text" class="form-control" onkeyup="javascript:checkForm(this)" id="host" name="host" placeholder="Domain / IP">
 				</div>
-				<div class="form-group">
-					<input type="text" size="5" class="form-control" id="port" name="port" placeholder="Port">
-				</div>
+
 				<button type="submit" class="btn btn-default" id="add-button">Add</button>
 			</form>
 			<br>
