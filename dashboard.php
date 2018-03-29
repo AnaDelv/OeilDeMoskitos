@@ -49,6 +49,8 @@ $sql = $pdo ->query("SELECT * FROM `server`");
         <?php
         while ($donnee = $sql->fetch()) {
 
+            $id = $donnee['idserver'];
+
         ?>
 
         <table class="table table-bordered">
@@ -59,10 +61,22 @@ $sql = $pdo ->query("SELECT * FROM `server`");
                         <b>Serveur : </b><?php echo $donnee['name']?>
                         <br>
                         <span>Ce serveur a été indisponible <?php echo $donnee['counter']; ?> fois</span>
+
+
+
+
+                        <?php if ($donnee['status'] == 1) {
+
+                            echo " <br>
+                        <span>Le serveur est indisponible depuis ";
+                            getTimeDifference($id);
+                            echo "</span>";
+                       };
+                        ?>
                     </th>
                     <th scope="col" class="text-center"><?php echo $donnee['host']?></th>
                     <th scope="col" class="text-center"><?php pingIp($donnee['host']); ?></th>
-<!--                    Nombre de fois où le serveur est indisponible -->
+
                 </tr>
             </thead>
             <!-- Fin ligne serveurs  -->
@@ -76,7 +90,7 @@ $sql = $pdo ->query("SELECT * FROM `server`");
                     <tr>
                         <th class="text-center"><?php echo $data['name'] ?></th>
                         <td class="text-center"><?php echo $data['socket'] ?></td>
-                        <td class="text-center"><?php pingSocket($donnee['host'],$data['socket']); ?></td>
+<!--                        <td class="text-center">--><?php //pingSocket($donnee['host'],$data['socket']); ?><!--</td>-->
                     </tr>
 
                     <?php

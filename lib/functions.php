@@ -3,6 +3,9 @@
 include 'pdo.php';
 
 
+date_default_timezone_set('Europe/Brussels');
+
+
 function pingIp($ip) {
 
 
@@ -42,25 +45,34 @@ function getPingIpResult($ip) {
 }
 
 
+function getTimeDifference($id)
+{
+
+    $pdo = connectDb();
+    $sql = $pdo->query("SELECT downtime FROM `server` WHERE idserver =".$id);
+
+    while ($donnee = $sql->fetch()) {
+
+        $time = $donnee['downtime'];
+        $nowtime = date('Y-m-d H:i:s');
 
 
-// combien de paquets envoie-t-on? 1 pour la précision?
-// Quelle intervalle de temps?
+        $d1 = new DateTime($time);
+        $d2 = new DateTime($nowtime);
 
-// récupérer le temps de réponse des ping vers les serveurs
+        $diff = $d1->diff($d2);
+        $diffm = $d1->diff($d2);
+        $diffh = $d1->diff($d2);
+        $diffi = $d1->diff($d2);
+        $diffs = $d1->diff($d2);
 
-// récupérer le nombre de fois où la réponse du ping est de 1
-
-// note de fiabilité : taux de disponibilité, durée d'indisponibilité (en pourcentages, en temps cumulé d'indisponibilté)
-
-// ex : si le serveur est disponible tout le temps : 0s d'indisponibilité
-
-// Il faut changer la durée si le statut change
-
-
-// chercher une solution pour le temps réel : rafraichissement automatique, sinon bouton de rafraichissement
-// (à prioriser pour le TEMPS)
+        echo $nb_mois = $diffm->m . " mois ";
+        echo $nb_jours = $diff->d . " jour(s) ";
+        echo $nb_heur = $diffh->h . " h ";
+        echo $nb_min = $diffi->i . " min ";
+        echo $nb_sec = $diffs->s . " sec ";
 
 
+    }
+}
 
-// 1 - nbre paquet perdus / nmbres paquet total   = note de fiabilité
