@@ -21,6 +21,8 @@ function connection() {
 
     //Compare les éléments récupérés avec les éléments entrés : sont-ils les mêmes?
     if ($sqlmail_fetch['email'] == $login && $sqlpwd_fetch['password'] == $password) {
+        $_SESSION['email'] = $sqlmail_fetch['email'];
+        $_SESSION['password'] = $sqlpwd_fetch['password'];
         $_SESSION['iduser'] = $sqlmail_fetch['iduser'];
         header('Location:../dashboard.php');
     } else {

@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['iduser'])) {
+    die ("ERREUR: Vous n'avez pas accès à cette page.");
+
+    }
+
+
 include 'lib/functions.php';
 
 $pdo = connectDb();
@@ -7,7 +14,7 @@ $pdo = connectDb();
 $sql = $pdo ->query("SELECT * FROM `server`");
 
 
-?>
+    ?>
 
 <!DOCTYPE html>
 <html>
