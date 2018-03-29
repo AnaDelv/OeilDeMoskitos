@@ -58,6 +58,11 @@ $sql = $pdo ->query("SELECT * FROM `server`");
                     <th><b>Serveur : </b><?php echo $donnee['name']?></th>
                     <th class="text-center"><?php echo $donnee['host']?></th>
                     <th class="text-center"><?php pingIp($donnee['host']); ?></th>
+<!--                    Nombre de fois où le serveur est indisponible -->
+                    <th class="text-center"><?php echo $donnee['counter']; ?></th>
+
+
+
                 </tr>
             </thead>
             <!-- Fin ligne serveurs  -->
