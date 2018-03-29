@@ -57,7 +57,8 @@ $sql = $pdo ->query("SELECT * FROM `server`");
         while ($donnee = $sql->fetch()) {
 
             $id = $donnee['idserver'];
-
+            $ip = $donnee['host'];
+            $status = $donnee['status'];
         ?>
 
         <table class="table table-bordered">
@@ -66,24 +67,33 @@ $sql = $pdo ->query("SELECT * FROM `server`");
                 <tr>
                     <th scope="col">
                         <b>Serveur : </b><?php echo $donnee['name']?>
-                        <br>
-                        <span>Ce serveur a été indisponible <?php echo $donnee['counter']; ?> fois</span>
-
-
-
 
                         <?php if ($donnee['status'] == 1) {
 
                             echo " <br>
-                        <span>Le serveur est indisponible depuis ";
+                        <span>Temps d'indisponibilité du serveur : ";
                             getTimeDifference($id);
                             echo "</span>";
-                       };
-                        ?>
-                    </th>
-                    <th scope="col" class="text-center"><?php echo $donnee['host']?></th>
-                    <th scope="col" class="text-center"><?php pingIp($donnee['host']); ?></th>
+                       }
+                       else if ($status == 0) {
 
+                           echo " <br>
+                        <span>Temps de réponse du serveur : ";
+                            getPingIpResult($ip);
+                            echo "</span>";
+                            ?>
+                            <?php
+                        }
+                        ?>
+                        <br>
+                        <span>Ce serveur a été indisponible <?php echo $donnee['counter']; ?> fois</span>
+
+                    </th>
+
+                    <th scope="col" class="text-center"><?php echo $donnee['host']?></th>
+                    <th scope="col" class="text-center"><?php pingIp($donnee['host']); ?>
+
+                    </th>
                 </tr>
             </thead>
             <!-- Fin ligne serveurs  -->

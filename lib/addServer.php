@@ -17,7 +17,7 @@ function addServer($name, $host)
 {
 	$pdo = connectDb();
 	$pdo ->exec("INSERT INTO `server`(name, host) VALUES ('$name', '$host')");
-	header('Location: ../index.php');
+	header('Location: ../dashboard.php');
 }
 
 
