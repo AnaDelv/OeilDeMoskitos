@@ -44,39 +44,46 @@ if(isset($_SESSION['signup'])) {
     </div>
 <?php endif; ?>
 
-<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.php"><h1>OeilDeMoskitos</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
-    <div class="row">
+    <div class="container">
 
-        <div class="col"></div>
+        <div class="row">
 
-        <div id="login" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <h2>Se connecter</h2>
-            <form class="form-group" action="lib/login.php"  method="post">
-                <label for="email-connect">Email :</label>
-                <input type="email" name="email" class="form-control" id="email-connect" onkeyup="connectInput()" required>
+            <div class="col"></div>
 
-                <label for="mdp-connect">Mot de passe :</label>
-                <input type="password" name="mdp" class="form-control" id="mdp-connect" onkeyup="connectInput()" required>
-                <hr>
+            <div id="login" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <h2 class="text-center">Se connecter</h2>
+                <form class="form-group" action="lib/login.php"  method="post">
+                    <label for="email-connect">Email :</label>
+                    <input type="email" name="email" class="form-control" id="email-connect" onkeyup="connectInput()" required>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col">
-                            <button type="submit" class="btn btn-light" id="button-connect">Connexion</button>
+                    <label for="mdp-connect">Mot de passe :</label>
+                    <input type="password" name="mdp" class="form-control" id="mdp-connect" onkeyup="connectInput()" required>
+                    <hr>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-light" id="button-connect">Connexion</button>
+                            </div>
+                            <div class="col"></div>
                         </div>
-                        <div class="col"></div>
                     </div>
-                </div>
 
-            </form>
+                </form>
+            </div>
+
+            <div class="col"></div>
+
         </div>
-
-        <div class="col"></div>
-
     </div>
-</div>
 
 </body>
 

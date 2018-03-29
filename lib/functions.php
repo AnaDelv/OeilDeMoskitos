@@ -12,11 +12,11 @@ function pingIp($ip) {
 
 
         if ($return_var === 0  && $pos) {
-            echo "joignable";
+            echo "<img src='../img/green.svg' alt='joignable' width='30'>";
 
         } else {
 
-            echo 'injoignable';
+            echo "<img src='../img/red.svg' alt='injoignable' width='30'>";
 
         }
 
@@ -28,9 +28,9 @@ function pingSocket($host, $port) {
 
         $socket = @fsockopen($host,$port);
         if($socket === false) {
-            echo "injoignable";
+            echo "<img src='../img/red.svg' alt='injoignable' width='30'>";
         } else {
-            echo "joignable";
+            echo "<img src='../img/green.svg' alt='joignable' width='30'>";
     }
 }
 
